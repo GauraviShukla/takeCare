@@ -5,9 +5,37 @@ sap.ui.controller("takecare.initialView", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf takecare.initialView
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+		 data = {Hospitals: [
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", address: "Grahite India Grahite India Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     
+		                     ]};
+		 var model = new sap.ui.model.json.JSONModel(data);
+		 this.getView().setModel(model);
+	},
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

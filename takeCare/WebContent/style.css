@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+.tile{
+	margin: 10px !important;
+	width: 11rem !important;
+	height: 11rem !important;
+	background-color: white !important;
+}
+#tileContainer{
+	margin: auto;
+}
+.nameFiled{
+	margin-left: 5px;
+	font-size: 16px !important;
+}
+.titleNameBox >.sapMFlexItem:nth-of-type(1){
+	width: 90px; 
+}

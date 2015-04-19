@@ -13,12 +13,52 @@ sap.ui.jsview("takecare.initialView", {
 	* @memberOf takecare.initialView
 	*/ 
 	createContent : function(oController) {
- 		return new sap.m.Page({
-			title: "Title",
-			content: [
-			
-			]
+		var masterPage = new sap.m.Page();
+		
+		var image = new sap.m.Image({
+			width: "80px",
+			src: "{image}"
 		});
+		var nameFiled = new sap.m.Text({
+			text: "{name}"
+		}).addStyleClass("nameFiled");
+		var addresField = new sap.m.Text({ 
+			text: "{address}"
+		});
+		var contactField = new sap.m.Text({ 
+			text: "{contact}"
+		});
+		var ambulanceField = new sap.m.Text({ 
+			text: "{ambulance}"
+		});
+		var ratingField = new sap.m.RatingIndicator({
+			iconSize: "10px",
+			value: "{rating}"
+		});
+		
+		var titleNameBox = new sap.m.HBox({
+			items: [image, nameFiled]
+		}).addStyleClass("titleNameBox");
+		
+		var tileVBox = new sap.m.VBox({
+			items: [titleNameBox, addresField, contactField, ambulanceField, ratingField]
+		}).addStyleClass("tileVBox");
+		
+		var tileTemplate = new sap.m.CustomTile({
+			content: tileVBox
+		}).addStyleClass("tile");
+		
+		var tileContainer = new sap.m.TileContainer("tileContainer",{
+			height: "600px",
+			width: "1000px"
+		});
+		tileContainer.bindAggregation("tiles","/Hospitals", tileTemplate);
+ 		
+		var page = new sap.m.Page("detailPage",{
+			title: "Title",
+			content: [tileContainer]
+		});
+ 		return page;
 	}
 
 });
