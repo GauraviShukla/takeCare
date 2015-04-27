@@ -3,8 +3,8 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="takeCare" id="takeCarePage">
 		<headerContent>
-			<Button icon="sap-icon://person-placeholder" text="Signup" press="onPressOpenSignupDialog"></Button>
-			<Button icon="sap-icon://log" text="Login" press="onPressOpenLoginDialog"></Button>
+			<Button text="Signup" press="onPressOpenSignupDialog"></Button>
+			<Button text="Login" press="onPressOpenLoginDialog"></Button>
 		</headerContent>
 		<content>
 			<Bar design="SubHeader">
