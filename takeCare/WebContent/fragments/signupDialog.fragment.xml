@@ -1,0 +1,24 @@
+<Dialog xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout"
+	title="Sign up">
+	<layout:VerticalLayout width="100%">
+		<layout:content>
+			<Input type="Text" id="firstName" placeholder="Enter First Name"></Input>
+			<Input type="Text" id="lastName" placeholder="Enter Last Name"></Input>
+			<Input type="Email" id="email" placeholder="Enter Email ID"></Input>
+			<Input type="Password" id="password" placeholder="Enter Password"></Input>
+			<Input type="Text" id="passwordConfirm" placeholder="Confirm Password"></Input>
+			<Label text="Select your Company"></Label>
+			<ActionSelect id="companyName" items="{/listOfCompanies}">
+				<items>
+					<core:Item key="{companyKey}" text="{companyName}"></core:Item>
+				</items>
+			</ActionSelect>
+		</layout:content>
+	</layout:VerticalLayout>
+	<beginButton>
+		<Button text="Sign up" press="onPressSignup"></Button>
+	</beginButton>
+	<endButton>
+		<Button text="Cancel" press="onPressHandleClose"></Button>
+	</endButton>
+</Dialog>

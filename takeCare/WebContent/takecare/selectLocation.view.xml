@@ -1,0 +1,40 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:layout="sap.ui.layout" controllerName="takecare.selectLocation"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="takeCare" id="takeCarePage">
+		<headerContent>
+			<Button icon="sap-icon://person-placeholder" text="Signup" press="onPressOpenSignupDialog"></Button>
+			<Button icon="sap-icon://log" text="Login" press="onPressOpenLoginDialog"></Button>
+		</headerContent>
+		<content>
+			<Bar design="SubHeader">
+				<contentLeft>
+					<Link emphasised="true" text="Home Remedies"></Link>
+					<Link emphasised="true" text="Check BMI" press="onPressOpenBMIDialog"></Link>
+				</contentLeft>
+			</Bar>
+			<FlexBox alignItems="Center" justifyContent="Center">
+				<items>
+					<ActionSelect id="selectOptionForCities" items="{/listOfCities}"
+						change="getCorrespondingLocationsForSelectedCity">
+						<items>
+							<core:Item text="{cityName}"></core:Item>
+						</items>
+					</ActionSelect>
+					<ActionSelect id="selectOptionForLocation" items="{/listOfLocations}">
+						<items>
+							<core:Item text="{locationName}"></core:Item>
+						</items>
+					</ActionSelect>
+				</items>
+			</FlexBox>
+			<FlexBox alignItems="Center" justifyContent="Center">
+				<SegmentedButton>
+					<Button icon="" text="Hospitals" press="onPressShowListOfHospitals"></Button>
+					<Button icon="" text="Doctors" press="onPressShowListOfDoctors"></Button>
+					<Button icon="" text="Medical Stores" press="onPressShowListOfMedicalStores"></Button>
+				</SegmentedButton>
+				</FlexBox>
+		</content>
+	</Page>
+</core:View>

@@ -6,15 +6,21 @@
 	<link type="text/css" href="style.css" rel="stylesheet" />
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
-				data-sap-ui-libs="sap.m"
+				data-sap-ui-libs="sap.m" data-sap-ui-xx-bindingSyntax="complex"
 				data-sap-ui-theme="sap_bluecrystal">
 		</script>
 		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
-
+		<script>
+			sap.ui.localResources("fragments");
+			jQuery.sap.registerModulePath("fragments","fragments/");
+			
+			sap.ui.localResources("takecare");
+			jQuery.sap.registerModulePath("takecare","takecare/");
+		</script>
 		<script>
 				sap.ui.localResources("takecare");
-				var app = new sap.m.App({initialPage:"idinitialView1"});
-				var page = sap.ui.view({id:"idinitialView1", viewName:"takecare.initialView", type:sap.ui.core.mvc.ViewType.JS});
+				var app = new sap.m.App({initialPage:"idselectlocation"});
+				var page = sap.ui.view({id:"idselectlocation", viewName:"takecare.selectLocation", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(page);
 				app.placeAt("content");
 		</script>

@@ -1,0 +1,16 @@
+<Dialog xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout" title="Calculate BMI">
+	<layout:VerticalLayout width="100%">
+		<layout:content>
+			<Label text="Enter Weigth"></Label>
+			<Input type="Number" id="weight" placeholder="Enter weight in Kilograms"></Input>
+			<Label text="Enter Height"></Label>
+			<Input type="Number" id="height" placeholder="Enter height in meters"></Input>
+		</layout:content>
+	</layout:VerticalLayout>
+	<beginButton>
+		<Button text="Calculate" press="onPressCalculateBMI"></Button>
+	</beginButton>
+	<endButton>
+		<Button text="Cancel" press="onPressHandleClose"></Button>
+	</endButton>
+</Dialog>
