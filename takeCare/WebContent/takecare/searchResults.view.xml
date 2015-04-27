@@ -1,7 +1,5 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m" controllerName="takecare.searchResults" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Title">
-		<content>
 			<TileContainer id="container" height="600px" width="1000px" tiles="{/Hospitals}">
 				<CustomTile xmlns="sap.m" press="" class="tile" >
 					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
@@ -23,6 +21,4 @@
 					</content> 
 				</CustomTile>
 			</TileContainer>
-		</content>
-	</Page>
 </core:View>
