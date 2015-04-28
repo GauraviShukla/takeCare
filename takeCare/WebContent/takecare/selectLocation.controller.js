@@ -2,9 +2,9 @@ sap.ui.controller("takecare.selectLocation", {
 
 
 	onInit: function() {
-		oController = this.getView().getController();
-		oController.bindDataToCitiesList();
-		oController.setInitialLocationsData();
+		this.bindDataToCitiesList();
+		this.setInitialLocationsData();
+		this.setHomeRemediesModel();
 	},
 	
 	bindDataToCitiesList : function(){
@@ -18,7 +18,7 @@ sap.ui.controller("takecare.selectLocation", {
 		}
 		var oModel_cities = new sap.ui.model.json.JSONModel();
 		oModel_cities.setData({listOfCities : citiesList});
-		oController.byId("selectOptionForCities").setModel(oModel_cities);
+		this.byId("selectOptionForCities").setModel(oModel_cities);
 		
 	},
 	
@@ -28,7 +28,7 @@ sap.ui.controller("takecare.selectLocation", {
 		var locationListArrayBangalore = ["BEML Layout","Kundalahalli","Marathalli","Bellandur","Banshankari","Majestic"];
 		var locationListArrayDelhi = ["Vikaspuri","Janakpuri","Dwarka","Rajouri Garden","Connaught Place"];
 		var listOfLocations;
-		var selectedCity = oController.byId("selectOptionForCities").getSelectedItem().getText();
+		var selectedCity = this.byId("selectOptionForCities").getSelectedItem().getText();
 		if(selectedCity == "Bangalore"){
 			locationListArray = locationListArrayBangalore;
 		}
@@ -40,7 +40,7 @@ sap.ui.controller("takecare.selectLocation", {
 			locationObject.locationName = locationListArray[i];
 			locationsList.push(locationObject);
 		}
-		oController.byId("selectOptionForLocation").getModel().setData({listOfLocations : locationsList});
+		this.byId("selectOptionForLocation").getModel().setData({listOfLocations : locationsList});
 	},
 	
 	setInitialLocationsData : function(){
@@ -54,7 +54,7 @@ sap.ui.controller("takecare.selectLocation", {
 		}
 		var oModel_locations = new sap.ui.model.json.JSONModel();
 		oModel_locations.setData({listOfLocations : locationsList});
-		oController.byId("selectOptionForLocation").setModel(oModel_locations);
+		this.byId("selectOptionForLocation").setModel(oModel_locations);
 	},
 	
 	onPressOpenCategoriesView : function(oEvent){
@@ -64,17 +64,17 @@ sap.ui.controller("takecare.selectLocation", {
 			width : "100%"
 		});
 		
-		oController.byId("takeCarePage").removeAllContent();
-		oController.byId("takeCarePage").addContent(categoriesView);
+		this.byId("takeCarePage").removeAllContent();
+		this.byId("takeCarePage").addContent(categoriesView);
 	},
 	
 	onPressOpenBMIDialog : function(oEvent){
-		if(oController.calculateBMIDialog == undefined){
-			oController.calculateBMIDialog = sap.ui.xmlfragment("calculateBMIDialog","fragments.calculateBMIDialog",oController);
-			oController.getView().addDependent(oController.calculateBMIDialog);
+		if(this.calculateBMIDialog == undefined){
+			this.calculateBMIDialog = sap.ui.xmlfragment("calculateBMIDialog","fragments.calculateBMIDialog",this);
+			this.getView().addDependent(this.calculateBMIDialog);
 		}
 		
-		oController.calculateBMIDialog.open();
+		this.calculateBMIDialog.open();
 	},
 	
 	onPressHandleClose : function(oEvent){
@@ -84,56 +84,158 @@ sap.ui.controller("takecare.selectLocation", {
 	onPressCalculateBMI : function(oEvent){
 		var personsWeight = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("calculateBMIDialog","weight")).getValue();
 		var personsHeight = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("calculateBMIDialog","height")).getValue();
-		oController.calculatedBMI = personsWeight / (personsHeight * personsHeight);
-		oController.openDisplayBMIDialog();
+		this.calculatedBMI = personsWeight / (personsHeight * personsHeight);
+		this.openDisplayBMIDialog();
 	},
 	
 	openDisplayBMIDialog : function(oEvent){
 		var weightType;
-		if(oController.displayBMIDialog == undefined){
-			oController.displayBMIDialog = sap.ui.xmlfragment("displayBMIDialog","fragments.displayBMIDialog",oController);
-			oController.getView().addDependent(oController.displayBMIDialog);
+		if(this.displayBMIDialog == undefined){
+			this.displayBMIDialog = sap.ui.xmlfragment("displayBMIDialog","fragments.displayBMIDialog",this);
+			this.getView().addDependent(this.displayBMIDialog);
 		}
 		
-		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("displayBMIDialog","bmiValue")).setText("Your BMI is : "+oController.calculatedBMI);
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("displayBMIDialog","bmiValue")).setText("Your BMI is : "+this.calculatedBMI);
 		
-		if(oController.calculatedBMI < 18.5){
+		if(this.calculatedBMI < 18.5){
 			weightType = "You are Underweight";
 		}
-		else if(oController.calculatedBMI > 18.5 && oController.calculatedBMI < 24.9){
+		else if(this.calculatedBMI > 18.5 && this.calculatedBMI < 24.9){
 			weightType = "You are normal weight";
 		}
-		else if(oController.calculatedBMI > 25.0 && oController.calculatedBMI < 29.9){
+		else if(this.calculatedBMI > 25.0 && this.calculatedBMI < 29.9){
 			weightType = "You are Overweight";
 		}
-		else if(oController.calculatedBMI > 30.0){
+		else if(this.calculatedBMI > 30.0){
 			weightType = "You are Obese";
 		}
 		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("displayBMIDialog","weightType")).setText(weightType);
-		oController.displayBMIDialog.open();
+		this.displayBMIDialog.open();
 	},
 
 	onPressOpenLoginDialog : function(oEvent){
-		if(oController.loginDialog == undefined){
-			oController.loginDialog = sap.ui.xmlfragment("loginDialog","fragments.loginDialog",oController);
-			oController.getView().addDependent(oController.loginDialog);
+		if(this.loginDialog == undefined){
+			this.loginDialog = sap.ui.xmlfragment("loginDialog","fragments.loginDialog",this);
+			this.getView().addDependent(this.loginDialog);
 		}
-		oController.loginDialog.open();
+		this.loginDialog.open();
 	},
 	
 	onPressOpenSignupDialog : function(oEvent){
-		if(oController.signupDialog == undefined){
-			oController.signupDialog = sap.ui.xmlfragment("signupDialog","fragments.signupDialog",oController);
-			oController.getView().addDependent(oController.signupDialog);
+		if(this.signupDialog == undefined){
+			this.signupDialog = sap.ui.xmlfragment("signupDialog","fragments.signupDialog",this);
+			this.getView().addDependent(this.signupDialog);
 		}
-		oController.signupDialog.open();
+		this.signupDialog.open();
+	},
+	
+	onPressOpenListOfDiseases : function(oEvent){
+		var diseaseList = [];
+		var listOfDiseases;
+		if(this.diseasesForHomeRemediesDialog == undefined){
+			this.diseasesForHomeRemediesDialog = sap.ui.xmlfragment("diseasesForHomeRemediesDialog","fragments.diseasesForHomeRemediesDialog",this);
+			this.getView().addDependent(this.diseasesForHomeRemediesDialog);
+		}
+		
+		var array_diseases = ["Common Cold","Cough", "Fever Blisters", "Common Fever", "Sore Throat", "Heartburn", "Other Simple Remedies"];
+		for(var i = 0; i< array_diseases.length; i++){
+			var diseaseName = {};
+			diseaseName.name = array_diseases[i];
+			diseaseList.push(diseaseName);
+		}
+		
+		var omodel_diseaseListModel = new sap.ui.model.json.JSONModel();
+		omodel_diseaseListModel.setData({listOfCommonDiseases : diseaseList});
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("diseasesForHomeRemediesDialog","listOfDiseases")).setModel(omodel_diseaseListModel);
+		this.diseasesForHomeRemediesDialog.open();
+	},
+	
+	onSelectOpenRemediesDialog : function(oEvent){
+		
+		var array_commonColdRemedies = ["Garlic soup helps reduce the harshness of a cold.",
+		                                "A glass of lemon juice a day would raise the body’s resistance.",
+		                                "Onion juice can also help avoid a cold.",
+		                                "Drink plenty of water, at least 6-8 glasses per day."];
+		
+		var array_coughRemedies = ["Basil leaves and ginger are very effective in relieving an irritating dry cough. You can either chew basil leaves or take fresh ginger with hot water.",
+		                           "Eat grapes. Grapes when eaten regularly can also help get rid of severe coughs.",
+		                           "Drinking a few cups of hot water with salt can also help stop coughing.",
+		                           "Take a hot shower. Breathing in the steam can provide temporary relief."];
+		
+		var array_feverBlistersRemedies = ["Apply petroleum jelly to the skin.",
+		                                   "Apply cold compress on the affected area.",
+		                                   "Apply cold compress on the affected area."];
+		
+		var array_commonFeverRemedies = ["Drink tea made with from saffron.",
+		                                 "Eat oranges. Oranges give instant energy and helps the body fight unwanted infections.",
+		                                 "A glass of milk also works wonders."];
+		
+		var array_soreThroatRemedies = ["A mixture of Listerine mouth wash and Hydrogen Peroxide. Pour a little of each liquid into a cup (equal parts) and gargle.",
+		                                "Eat three to four marshmallows to soothe a sore throat. The gelatin in the marshmallows is what soothes the sore throat.",
+		                                "Drink hot water, lemon juice, and honey mixed together."];
+		
+		var array_hearburnRemedies = ["Dissolve a tsp. of baking soda in 8 ounces (1 cup) of water and drink. Baking soda is a natural antacid.",
+		                              "Bananas act as a natural antacid in the body. You can eat either fresh or dried bananas.",
+		                              "Fresh ginger is one of the oldest remedies for heartburn. It can be added to food when its cooked, eaten raw, or consumed as ginger tea."];
+		
+		var array_otherRemedies = ["Use duct tape to remove warts.",
+		                           "Cure nail fungus with vapor rub.",
+		                           "Soothe eczema by using oatmeal.",
+		                           "Cure bad breath by eating yogurt.",
+		                           "A spoonful of sugar to cure the hiccups.",
+		                           "Bite a pencil to cure a headache.",
+		                           "Eat olives to help with motion sickness."];
+		var array_remedies = [];
+		var remedyList = [];
+		var listOfRemedies ; 
+		
+		var diseaseName = oEvent.getParameter("listItem").getBindingContext().getObject().name;
+		if(diseaseName === "Common Cold"){
+			array_remedies = array_commonColdRemedies;
+		}
+		else if(diseaseName === "Cough"){
+			array_remedies = array_coughRemedies;
+		}
+		else if(diseaseName === "Fever Blisters"){
+			array_remedies = array_feverBlistersRemedies
+		}
+		else if(diseaseName === "Common Fever"){
+			array_remedies = array_commonFeverRemedies;
+		}
+		else if(diseaseName === "Sore Throat"){
+			array_remedies = array_soreThroatRemedies;
+		}
+		else if(diseaseName === "Heartburn"){
+			array_remedies = array_hearburnRemedies;
+		}
+		else if(diseaseName === "Other Simple Remedies"){
+			array_remedies = array_otherRemedies;
+		}
+		
+		for(var i = 0; i < array_remedies.length; i++){
+			var remedyObject = {};
+			remedyObject.remedy = array_remedies[i];
+			remedyList.push(remedyObject);
+		}
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("homeRemediesDialog","listOfDiseases")).getModel().setData({listOfRemedies : remedyList});
+		this.homeRemediesDialog.open();
+	},
+	
+	setHomeRemediesModel : function(){
+		if(this.homeRemediesDialog == undefined){
+			this.homeRemediesDialog = sap.ui.xmlfragment("homeRemediesDialog","fragments.homeRemediesDialog",this);
+			this.getView().addDependent(this.homeRemediesDialog);
+		}
+		var oModel_remedies = new sap.ui.model.json.JSONModel();
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("homeRemediesDialog","listOfDiseases")).setModel(oModel_remedies);
+		
 	},
 	onExit: function() {
-		if(oController.displayBMIDialog != undefined){
-			oController.displayBMIDialog.destroy();
+		if(this.displayBMIDialog != undefined){
+			this.displayBMIDialog.destroy();
 		}
-		if(oController.openDisplayBMIDialog != undefined){
-			oController.openDisplayBMIDialog.destroy();
+		if(this.openDisplayBMIDialog != undefined){
+			this.openDisplayBMIDialog.destroy();
 		}
 	}
 

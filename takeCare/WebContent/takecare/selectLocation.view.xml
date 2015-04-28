@@ -9,7 +9,7 @@
 		<content>
 			<Bar design="SubHeader">
 				<contentLeft>
-					<Link emphasised="true" text="Home Remedies"></Link>
+					<Link emphasised="true" text="Home Remedies" press="onPressOpenListOfDiseases"></Link>
 					<Link emphasised="true" text="Check BMI" press="onPressOpenBMIDialog"></Link>
 				</contentLeft>
 			</Bar>
