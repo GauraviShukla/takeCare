@@ -99,7 +99,9 @@ sap.ui.controller("takecare.selectLocation", {
 		this.openDisplayBMIDialog();
 		this.calculatedBMI = personsWeight / (personsHeight * personsHeight);
 		this.openDisplayBMIDialog();
+		//
 	},
+	
 	
 	openDisplayBMIDialog : function(oEvent){
 		var weightType;
