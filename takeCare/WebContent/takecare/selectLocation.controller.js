@@ -2,9 +2,8 @@ sap.ui.controller("takecare.selectLocation", {
 
 
 	onInit: function() {
-		oController = this.getView().getController();
-		oController.bindDataToCitiesList();
-		oController.setInitialLocationsData();
+		this.bindDataToCitiesList();
+		this.setInitialLocationsData();
 		
 		var resultsView = sap.ui.view({
 			viewName : "takecare.searchResults",
@@ -12,7 +11,8 @@ sap.ui.controller("takecare.selectLocation", {
 			width : "100%"
 		});
 		
-		oController.byId("takeCarePage").addContent(resultsView);
+		
+		this.byId("takeCarePage").addContent(resultsView);
 		this.bindDataToCitiesList();
 		this.setInitialLocationsData();
 		this.setHomeRemediesModel();
@@ -95,8 +95,8 @@ sap.ui.controller("takecare.selectLocation", {
 	onPressCalculateBMI : function(oEvent){
 		var personsWeight = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("calculateBMIDialog","weight")).getValue();
 		var personsHeight = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("calculateBMIDialog","height")).getValue();
-		oController.calculatedBMI = personsWeight / (personsHeight * personsHeight);
-		oController.openDisplayBMIDialog();
+		this.calculatedBMI = personsWeight / (personsHeight * personsHeight);
+		this.openDisplayBMIDialog();
 		this.calculatedBMI = personsWeight / (personsHeight * personsHeight);
 		this.openDisplayBMIDialog();
 	},
