@@ -1,21 +1,18 @@
 @CHARSET "UTF-8";
 .tile{
-	margin: 10px !important;
-	width: 11rem !important;
-	height: 11rem !important;
 	background-color: white !important;
 }
 #tileContainer{
 	margin: auto;
 }
-.nameFiled{
-	margin-left: 5px;
+.nameField{
+	margin-top: 10px;
+	font-size: 18px !important;
+}
+.nameFieldVBox{
+	margin-left: 15px;
 	font-size: 16px !important;
 }
 .titleNameBox >.sapMFlexItem:nth-of-type(1){
 	width: 90px; 
-}
-
-#__xmlview0--container{
-	margin-left: 21%;
 }
