@@ -1,0 +1,34 @@
+<Dialog xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout"
+	title="Set Reminder" id="dosageReminderDialog">
+	<Label text="Medicine Name"></Label>
+	<Input id="medicineName" type="Text" placeholder="Enter Medicine Name" value="{/medicineName}"></Input>
+	<Label text="Potency"></Label>
+	<HBox>
+	<Input id="potencyValue" type="Number" placeholder="Enter Dosage Quantity"></Input>
+	<Input value="{/medicinePotency}" showSuggestion="true" showValueHelp="true"
+		valueHelpRequest="handleValueHelpRequest"></Input>
+	</HBox>
+	<Label text="Dosage Timings"></Label>
+	<VBox>
+	<RadioButtonGroup columns="3">
+		<buttons>
+			<RadioButton text="Before"></RadioButton>
+			<RadioButton text="After"></RadioButton>
+		</buttons>
+	</RadioButtonGroup>
+	<HBox>
+		<CheckBox text="Breakfast"></CheckBox>
+		<CheckBox text="Lunch"></CheckBox>
+		<CheckBox text="Dinner"></CheckBox>
+	</HBox>
+	</VBox>
+	<Label text="Reconsultation Date"></Label>
+	<DateTimeInput type="Date">
+	</DateTimeInput>
+	<beginButton>
+		<Button text="Set Reminder" press="onPressSetReminder"></Button>
+	</beginButton>
+	<endButton>
+		<Button text="Cancel" press="onPressHandleClose"></Button>
+	</endButton>
+</Dialog>

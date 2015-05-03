@@ -1,0 +1,8 @@
+<SelectDialog xmlns:core="sap.ui.core" xmlns="sap.m"
+	title="select potency" items="{/listOfUOM}" confirm="handleSelect">
+	<StandardListItem title="{uom}" type="Active">
+		<customData>
+			<core:CustomData key="uom" value="{uom}" />
+		</customData>
+	</StandardListItem>
+</SelectDialog>

@@ -245,6 +245,63 @@ sap.ui.controller("takecare.selectLocation", {
 		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("homeRemediesDialog","listOfDiseases")).setModel(oModel_remedies);
 		
 	},
+	
+	onPressOpenDosageReminderDialog : function(oEvent){
+		if(this.openDosageReminderDialog == undefined){
+			this.openDosageReminderDialog = sap.ui.xmlfragment("openDosageReminderDialog","fragments.openDosageReminderDialog",this);
+			this.getView().addDependent(this.openDosageReminderDialog);
+		}
+		var medicineDosage = {};
+		medicineDosage.medicineName = "";
+		medicineDosage.medicinePotency = "Tablet";
+		var oModel_dosage = new sap.ui.model.json.JSONModel();
+		oModel_dosage.setData(medicineDosage);
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("openDosageReminderDialog","dosageReminderDialog")).setModel(oModel_dosage);
+		
+		this.openDosageReminderDialog.open();
+	},
+	
+	handleValueHelpRequest : function(oEvent){
+		var uomListModel;
+		var uomList= [];
+		var uom_Array = ["Tablet","Tbsp","Tblsp"];
+		this._inputFieldForWhichValueHelpRequested = oEvent.getSource();
+		if(this.listOfUOM == undefined){
+			for(var i = 0; i < uom_Array.length; i++){
+				var uomObject = {};
+				uomObject.uom = uom_Array[i];
+				uomList.push(uomObject);
+			}
+			this.listOfUOM = {listOfUOM : uomList};
+			uomListModel = new sap.ui.model.json.JSONModel(this.listOfUOM);
+			if(this.uomDialog == undefined){
+				this.uomDialog = sap.ui.xmlfragment("uomDialog","fragments.uomDialog",this);
+				this.getView().addDependent(this.uomDialog);
+				this.uomDialog.setModel(uomListModel);
+				this.uomDialog.attachSearch(this.uomSearch,this);
+				this.uomDialog.attachLiveChange(this.uomSearch,this);
+			}
+			
+			
+		}
+		this.uomDialog.open();
+		
+	},
+	
+	handleSelect : function(oEvent){
+		var oSource = oEvent.getParameter("selectedItem");
+		var sUom = oSource.getBindingContext().getProperty("uom");
+		if(this._inputFieldForWhichValueHelpRequested != undefined){
+			this._inputFieldForWhichValueHelpRequested.getModel().getData().medicinePotency = sUom;
+			this._inputFieldForWhichValueHelpRequested.getModel().checkUpdate();
+		}
+	},
+	
+	uomSearch : function(oEvent){
+		var properties = [];
+		properties.push("uom");
+		reusable.utils.uomSearch(oEvent.getSource()._oSearchField,this.uomDialog.getModel(),this.uomDialog.getBinding("items"),properties);
+	},
 	onExit: function() {
 		if(this.displayBMIDialog != undefined){
 			this.displayBMIDialog.destroy();

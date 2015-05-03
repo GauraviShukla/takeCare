@@ -16,7 +16,11 @@
 			
 			sap.ui.localResources("takecare");
 			jQuery.sap.registerModulePath("takecare","takecare/");
+			
+			sap.ui.localResources("reusable");
+			jQuery.sap.registerModulePath("reusable","reusable/");
 		</script>
+		<script type="text/javascript" src="reusable/utils.js"></script>
 		<script>
 				sap.ui.localResources("takecare");
 				var app = new sap.m.App({initialPage:"idselectlocation"});

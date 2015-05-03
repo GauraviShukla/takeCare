@@ -5,6 +5,7 @@
 			<Input type="Text" id="firstName" placeholder="Enter First Name"></Input>
 			<Input type="Text" id="lastName" placeholder="Enter Last Name"></Input>
 			<Input type="Email" id="email" placeholder="Enter Email ID"></Input>
+			<Input type="Number" id="phoneNumber" placeholder="Enter Phone Number"></Input>
 			<Input type="Password" id="password" placeholder="Enter Password"></Input>
 			<Input type="Text" id="passwordConfirm" placeholder="Confirm Password"></Input>
 			<Label text="Select your Company"></Label>

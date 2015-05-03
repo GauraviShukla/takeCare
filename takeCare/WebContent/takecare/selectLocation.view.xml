@@ -37,5 +37,13 @@
 				</SegmentedButton>
 				</FlexBox>
 		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="Add Prescription History" press="onPressOpenPrescriptionHistoryView"></Button>
+				<Button text="Set Medicine Reminders" press="onPressOpenDosageReminderDialog"></Button>
+				
+			</Toolbar>
+		</footer>
 	</Page>
 </core:View>
