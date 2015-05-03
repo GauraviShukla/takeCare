@@ -1,8 +1,8 @@
 jQuery.sap.declare("reusable.utils");
 reusable.utils = function(){
 	return {
-		uomSearch : function(oSearchField,model,binding,properties){
-			reusable.utils.fuzzySearch(this,model,oSearchField.getValue(),
+		uomSearch : function(oSearchField,val,model,binding,properties){
+			reusable.utils.fuzzySearch(this,model,val,
 					binding,oSearchField,properties,[]);
 		},
 		

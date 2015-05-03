@@ -4,7 +4,7 @@
 	<Page title="takeCare" id="takeCarePage">
 		<headerContent>
 		     <Button icon="sap-icon://person-placeholder" text="UserName"></Button>
-			<Button text="Signup" press="onPressOpenSignupDialog"></Button>
+			<Button text="Register" press="onPressOpenSignupDialog"></Button>
 			<Button text="Login" press="onPressOpenLoginDialog"></Button>
 		</headerContent>
 		<content>

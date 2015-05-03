@@ -16,6 +16,8 @@ sap.ui.controller("takecare.selectLocation", {
 		this.bindDataToCitiesList();
 		this.setInitialLocationsData();
 		this.setHomeRemediesModel();
+		this.setSecurityQuestionData();
+		this.setSpecialisationData();
 	},
 	
 	bindDataToCitiesList : function(){
@@ -27,9 +29,9 @@ sap.ui.controller("takecare.selectLocation", {
 			cityObject.cityName = citiesListArray[i];
 			citiesList.push(cityObject);
 		}
-		var oModel_cities = new sap.ui.model.json.JSONModel();
-		oModel_cities.setData({listOfCities : citiesList});
-		this.byId("selectOptionForCities").setModel(oModel_cities);
+		this.oModel_cities = new sap.ui.model.json.JSONModel();
+		this.oModel_cities.setData({listOfCities : citiesList});
+		this.byId("selectOptionForCities").setModel(this.oModel_cities);
 		
 	},
 	
@@ -63,9 +65,9 @@ sap.ui.controller("takecare.selectLocation", {
 			locationObject.locationName = locationListArray[i];
 			locationsList.push(locationObject);
 		}
-		var oModel_locations = new sap.ui.model.json.JSONModel();
-		oModel_locations.setData({listOfLocations : locationsList});
-		this.byId("selectOptionForLocation").setModel(oModel_locations);
+		this.oModel_locations = new sap.ui.model.json.JSONModel();
+		this.oModel_locations.setData({listOfLocations : locationsList});
+		this.byId("selectOptionForLocation").setModel(this.oModel_locations);
 	},
 	
 	onPressOpenCategoriesView : function(oEvent){
@@ -137,11 +139,66 @@ sap.ui.controller("takecare.selectLocation", {
 	},
 	
 	onPressOpenSignupDialog : function(oEvent){
+		var oController = this;
+		
+		var actionItems = [
+				 {text : "User"},
+				 {text : "Doctor"},
+				 {text : "Hospital"}
+				
+		];
+		
+		if(this.registrationActionSelect == undefined){
+			this.registrationActionSelect = sap.ui.xmlfragment("registrationActionSelect","fragments.registrationActionSelect",this);
+			this.getView().addDependent(this.registrationActionSelect);
+
+			var oRegModel = new sap.ui.model.json.JSONModel();
+			oRegModel.setData({actionItems : actionItems});
+			
+			this.registrationActionSelect.setModel(oRegModel);
+		}
+		this.registrationActionSelect.openBy(oEvent.getSource());
+	},
+	
+	handleRegistration : function(oEvent){
+		switch(oEvent.getSource().getBindingContext().getObject().text){
+			case "User" : this.onPressRegisterUser(oEvent);break;
+			case "Doctor" : this.onPressRegisterDoctor(oEvent);break;
+			case "Hospital" : this.onPressRegisterHospital(oEvent);break;
+		}
+	},
+	
+	onPressRegisterUser : function(oEvent){
 		if(this.signupDialog == undefined){
 			this.signupDialog = sap.ui.xmlfragment("signupDialog","fragments.signupDialog",this);
 			this.getView().addDependent(this.signupDialog);
 		}
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("signupDialog","securityQuestion")).setModel(this.oSecurityQuestionModel);
 		this.signupDialog.open();
+	},
+	
+	onPressRegisterDoctor : function(oEvent){
+		if(this.doctorSignupDialog == undefined){
+			this.doctorSignupDialog = sap.ui.xmlfragment("doctorSignupDialog","fragments.doctorSignupDialog",this);
+			this.getView().addDependent(this.doctorSignupDialog);
+		}
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("doctorSignupDialog","selectOptionForCities")).setModel(this.oModel_cities);
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("doctorSignupDialog","selectOptionForLocation")).setModel(this.oModel_locations);
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("doctorSignupDialog","selectOptionForSpecialisation")).setModel(this.oSpecialisationModel);
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("doctorSignupDialog","securityQuestion")).setModel(this.oSecurityQuestionModel);
+		
+		this.doctorSignupDialog.open();
+	},
+	
+	onPressRegisterHospital : function(oEvent){
+		if(this.hospitalSignupDialog == undefined){
+			this.hospitalSignupDialog = sap.ui.xmlfragment("hospitalSignupDialog","fragments.hospitalSignupDialog",this);
+			this.getView().addDependent(this.hospitalSignupDialog);
+		}
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("hospitalSignupDialog","selectOptionForCities")).setModel(this.oModel_cities);
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("hospitalSignupDialog","selectOptionForLocation")).setModel(this.oModel_locations);
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("hospitalSignupDialog","securityQuestion")).setModel(this.oSecurityQuestionModel);
+		this.hospitalSignupDialog.open();
 	},
 	
 	onPressOpenListOfDiseases : function(oEvent){
@@ -281,9 +338,9 @@ sap.ui.controller("takecare.selectLocation", {
 				this.uomDialog.attachSearch(this.uomSearch,this);
 				this.uomDialog.attachLiveChange(this.uomSearch,this);
 			}
-			
-			
 		}
+		
+		reusable.utils.uomSearch(oEvent.getSource(),"",this.uomDialog.getModel(),this.uomDialog.getBinding("items"),["uom"]);
 		this.uomDialog.open();
 		
 	},
@@ -300,8 +357,97 @@ sap.ui.controller("takecare.selectLocation", {
 	uomSearch : function(oEvent){
 		var properties = [];
 		properties.push("uom");
-		reusable.utils.uomSearch(oEvent.getSource()._oSearchField,this.uomDialog.getModel(),this.uomDialog.getBinding("items"),properties);
+		reusable.utils.uomSearch(oEvent.getSource()._oSearchField,oEvent.getParameter("value"),this.uomDialog.getModel(),this.uomDialog.getBinding("items"),properties);
 	},
+	
+	onPressOpenAddDoctorsDialog : function(oEvent){
+		if(this.addDoctorsDialog == undefined){
+			this.addDoctorsDialog = sap.ui.xmlfragment("addDoctorsDialog","fragments.addDoctorsDialog",this);
+			this.getView().addDependent(this.addDoctorsDialog);
+		}
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("addDoctorsDialog","selectOptionForSpecialisation")).setModel(this.oSpecialisationModel);
+		this.addDoctorsDialog.open();
+	},
+	
+	setSpecialisationData : function(){
+		specialisationList = [
+						 {specialisation : "Audiologist"},
+						 {specialisation : "Allergist"},
+						 {specialisation : "Allergist"},
+						 {specialisation : "Dentist"},
+						 {specialisation : "Gynecologist"},
+						 {specialisation : "Neurologist"},
+						 {specialisation : "Pediatrician"},
+						 {specialisation : "Physiologist"},
+						 {specialisation : "Surgeon"},
+						 {specialisation : "Others"}
+						
+				];
+		this.oSpecialisationModel = new sap.ui.model.json.JSONModel();
+		this.oSpecialisationModel.setData({specialisationList : specialisationList});
+		
+	},
+	
+	setSecurityQuestionData : function(){
+		securityQuestionList = [
+								 {question : "What was the name of your elementary / primary school?"},
+								 {question : "In what city or town does your nearest sibling live?"},
+								 {question : "What is the last name of the teacher who gave you your first failing grade?"},
+								 {question : "What time of the day were you born? (hh:mm)"}
+								
+						];
+				this.oSecurityQuestionModel = new sap.ui.model.json.JSONModel();
+				this.oSecurityQuestionModel.setData({securityQuestionList : securityQuestionList});
+				
+	},
+			
+	onPressAddDoctorToList : function(oEvent){
+		var doctorName = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("addDoctorsDialog","name")).getValue();
+		var doctorEmailId = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("addDoctorsDialog","email")).getValue();
+		var doctorConsultationFee = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("addDoctorsDialog","consultationFee")).getValue();
+		var doctorSpecialisation = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("addDoctorsDialog","selectOptionForSpecialisation")).getSelectedItem().getText();
+		var doctorExperience = sap.ui.getCore().byId(sap.ui.core.Fragment.createId("addDoctorsDialog","experience")).getValue();
+		
+		
+		var doctorDetails = {};
+		doctorDetails.doctorName = doctorName;
+		doctorDetails.doctorEmailId = doctorEmailId;
+		doctorDetails.doctorConsultationFee = doctorConsultationFee;
+		doctorDetails.doctorSpecialisation = doctorSpecialisation;
+		doctorDetails.doctorExperience = doctorExperience;
+		
+		var doctorDetailsStandardListItem = new sap.m.StandardListItem({
+			title : doctorName,
+			description : doctorEmailId,
+			info : doctorSpecialisation
+		});
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("hospitalSignupDialog","doctorsList")).addItem(doctorDetailsStandardListItem);
+		this.addDoctorsDialog.close();
+	
+	},
+	
+	onPressAddTimingsField : function(oEvent){
+		var fromLabel = new sap.m.Label({
+			text : "From"
+		});
+		var toLabel = new sap.m.Label({
+			text : "To"
+		});
+		var fromTimingInput = new sap.m.DateTimeInput({
+			type : "Time"
+		});
+		var toTimingInput = new sap.m.DateTimeInput({
+			type : "Time"
+		});
+		var timingsTemplateHBox = new sap.m.HBox({
+			items : [fromLabel,fromTimingInput,toLabel,toTimingInput]
+		});
+		var timingsCustomListItem = new sap.m.CustomListItem({
+			content : [timingsTemplateHBox]
+		});
+		sap.ui.getCore().byId(sap.ui.core.Fragment.createId("doctorSignupDialog","timingsList")).addItem(timingsCustomListItem);
+	},
+	
 	onExit: function() {
 		if(this.displayBMIDialog != undefined){
 			this.displayBMIDialog.destroy();

@@ -1,0 +1,5 @@
+<ActionSheet xmlns:core="sap.ui.core" xmlns="sap.m" buttons = "{/actionItems}" placement = "Bottom">
+<buttons>
+<Button text = "{text}" press= "handleRegistration"/>
+</buttons>
+</ActionSheet>

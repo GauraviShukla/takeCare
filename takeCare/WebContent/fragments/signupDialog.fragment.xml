@@ -7,13 +7,20 @@
 			<Input type="Email" id="email" placeholder="Enter Email ID"></Input>
 			<Input type="Number" id="phoneNumber" placeholder="Enter Phone Number"></Input>
 			<Input type="Password" id="password" placeholder="Enter Password"></Input>
-			<Input type="Text" id="passwordConfirm" placeholder="Confirm Password"></Input>
+			<Input type="Password" id="passwordConfirm" placeholder="Confirm Password"></Input>
 			<Label text="Select your Company"></Label>
-			<ActionSelect id="companyName" items="{/listOfCompanies}">
+			<ActionSelect id="companyName">
 				<items>
-					<core:Item key="{companyKey}" text="{companyName}"></core:Item>
+					<core:Item text="SAP Labs India"></core:Item>
 				</items>
 			</ActionSelect>
+			<Label text="Security Question"></Label>
+			<ActionSelect id="securityQuestion" items="{/securityQuestionList}">
+				<items>
+					<core:Item  text="{question}"></core:Item>
+				</items>
+			</ActionSelect>
+			<Input type="Text" id="securityAnswer" placeholder="Your Answer Here"></Input>
 		</layout:content>
 	</layout:VerticalLayout>
 	<beginButton>

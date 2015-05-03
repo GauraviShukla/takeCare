@@ -1,0 +1,56 @@
+<Dialog xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout"
+	title="Sign up">
+	<layout:VerticalLayout width="100%">
+		<layout:content>
+			<Input type="Text" id="firstName" placeholder="Enter First Name"></Input>
+			<Input type="Text" id="lastName" placeholder="Enter Last Name"></Input>
+			<Input type="Email" id="email" placeholder="Enter Email ID"></Input>
+			<Input type="Password" id="password" placeholder="Enter Password"></Input>
+			<Input type="Password" id="passwordConfirm" placeholder="Confirm Password"></Input>
+
+			<Input type="Text" id="phoneNumber" placeholder="Enter Phone Number"></Input>
+			<Input type="Text" id="ambulanceNumber" placeholder="Enter Ambulance Number"></Input>
+			<Label text="Location"></Label>
+			<HBox>
+				<ActionSelect id="selectOptionForCities" items="{/listOfCities}"
+					change="getCorrespondingLocationsForSelectedCity">
+					<items>
+						<core:Item text="{cityName}"></core:Item>
+					</items>
+				</ActionSelect>
+				<ActionSelect id="selectOptionForLocation" items="{/listOfLocations}">
+					<items>
+						<core:Item text="{locationName}"></core:Item>
+					</items>
+				</ActionSelect>
+			</HBox>
+			<Input type="Text" id="Address" placeholder="Enter Address"></Input>
+			<List id="doctorsList" noDataText="No doctors added">
+				<headerToolbar>
+					<Toolbar>
+						<content>
+							<Text text="Doctors"></Text>
+							<ToolbarSpacer></ToolbarSpacer>
+							<Button icon="sap-icon://add" press="onPressOpenAddDoctorsDialog"></Button>
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<items>
+				</items>
+			</List>
+			<Label text="Security Question"></Label>
+			<ActionSelect id="securityQuestion" items="{/securityQuestionList}">
+				<items>
+					<core:Item text="{question}"></core:Item>
+				</items>
+			</ActionSelect>
+			<Input type="Text" id="securityAnswer" placeholder="Your Answer Here"></Input>
+		</layout:content>
+	</layout:VerticalLayout>
+	<beginButton>
+		<Button text="Register" press="onPressRegisterDialog"></Button>
+	</beginButton>
+	<endButton>
+		<Button text="Cancel" press="onPressHandleClose"></Button>
+	</endButton>
+</Dialog>
