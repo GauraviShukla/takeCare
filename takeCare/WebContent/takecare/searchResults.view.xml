@@ -1,8 +1,11 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m" controllerName="takecare.searchResults" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Grid xmlns="sap.ui.layout" id="container" 	width="100%" content="{/Hospitals}" vSpacing="1.5"
-	hSpacing="1.5">
-			<VBox xmlns="sap.m" class="tile" >
+	hSpacing="1.5" class="gridLayout">
+ 	 <CustomTile xmlns="sap.m"
+			press="">
+		<content>  
+		<VBox xmlns="sap.m" class="tile" >
 					<items>
 						<HBox xmlns="sap.m" >
 									<items>
@@ -18,8 +21,11 @@
 										</VBox>
 									</items>
 							</HBox>
-							<RatingIndicator xmlns="sap.m" iconSize="10px" value= "{rating}">	</RatingIndicator>
+							<RatingIndicator xmlns="sap.m" iconSize="10px" enabled="false" value= "{rating}">	</RatingIndicator>
 						</items>
 				</VBox>
+ </content> 
+</CustomTile> 
+
 	</Grid>
 </core:View>
