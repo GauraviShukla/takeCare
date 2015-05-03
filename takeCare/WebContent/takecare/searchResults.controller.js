@@ -7,34 +7,37 @@ sap.ui.controller("takecare.searchResults", {
 */
 	onInit: function() {
 		 data = {Hospitals: [
-		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image:"images/doc1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     {image: "images/hospital1.jpg", name: "RxDx Hospital", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
-		                     
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3},
+		                     {image:"images/doc1.jpg", name: "doctor XYZXYZ", type: "Dentist", address: "Grahite India", contact: "9535443002", ambulance: "9535443002", rating: 3}
 		                     ]};
-		 var model = new sap.ui.model.json.JSONModel(data);
+		 
+		  var model = new sap.ui.model.json.JSONModel(data);
 		 this.getView().setModel(model);
+		 
 	},
 
 /**
