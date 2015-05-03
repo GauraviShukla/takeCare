@@ -2,24 +2,49 @@ sap.ui.controller("takecare.selectLocation", {
 
 
 	onInit: function() {
-		this.bindDataToCitiesList();
-		this.setInitialLocationsData();
 		
-		var resultsView = sap.ui.view({
-			viewName : "takecare.searchResults",
-			type : sap.ui.core.mvc.ViewType.XML,
-			width : "100%"
-		});
-		
-		
-		this.byId("takeCarePage").addContent(resultsView);
 		this.bindDataToCitiesList();
 		this.setInitialLocationsData();
 		this.setHomeRemediesModel();
 		this.setSecurityQuestionData();
 		this.setSpecialisationData();
+		this.onPressShowListOfDoctors();
 	},
-	
+	onPressShowListOfDoctors: function(){
+		results = sap.ui.getCore().byId("medicalStores--container");
+		this.byId("takeCarePage").removeContent(results);
+		
+		var resultsView = sap.ui.getCore().byId("doctorsResults");
+		if(!resultsView){
+			resultsView = sap.ui.view({
+			id: "doctorsResults",
+			viewName : "takecare.searchResults",
+			type : sap.ui.core.mvc.ViewType.XML,
+			width : "100%"
+		});
+		}
+		this.byId("takeCarePage").addContent(resultsView);
+	},
+	onPressShowListOfMedicalStores: function(){
+		docResults = sap.ui.getCore().byId("doctorsResults");
+		this.byId("takeCarePage").removeContent(docResults);
+		
+		medicalStoresView = sap.ui.getCore().byId("medicalStores--container");
+		if(!medicalStoresView)
+			this.medicalStoresView = sap.ui.xmlfragment("medicalStores","fragments.medicalStores",this);
+		var model = new sap.ui.model.json.JSONModel();
+
+//		var xhr = new XMLHttpRequest();
+//		 xhr.open("GET","https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=AIzaSyDjCts18DCLVN6G2ITqzEi-725PCP0dh0k"); 
+//	     xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+//	     xhr.setRequestHeader("Access-Control-Allow-Headers", "origin, x-requested-with, x-http-method-override, content-type");
+//	     xhr.setRequestHeader("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+//	     xhr.send();
+	     
+		model.loadData("medicalResults.json");
+		this.medicalStoresView.setModel(model);
+		this.byId("takeCarePage").addContent(this.medicalStoresView);
+	},
 	bindDataToCitiesList : function(){
 		var citiesList = [];
 		var citiesListArray = ["Bangalore","Delhi","Mumbai","Pune","Kolkata","Chennai"];

@@ -30,10 +30,10 @@
 				</items>
 			</FlexBox>
 			<FlexBox alignItems="Center" justifyContent="Center">
-				<SegmentedButton>
-					<Button icon="" text="Hospitals" press="onPressShowListOfHospitals"></Button>
-					<Button icon="" text="Doctors" press="onPressShowListOfDoctors"></Button>
-					<Button icon="" text="Medical Stores" press="onPressShowListOfMedicalStores"></Button>
+				<SegmentedButton selectedButton="Doctors">
+					<Button icon="" id="Hospitals" text="Hospitals" press="onPressShowListOfHospitals"></Button>
+					<Button icon="" id="Doctors" text="Doctors" press="onPressShowListOfDoctors"></Button>
+					<Button icon="" id="pharmacy" text="Medical Stores" press="onPressShowListOfMedicalStores"></Button>
 				</SegmentedButton>
 				</FlexBox>
 		</content>

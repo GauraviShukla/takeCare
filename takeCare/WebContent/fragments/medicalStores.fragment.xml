@@ -1,0 +1,23 @@
+	<Grid xmlns="sap.ui.layout" id="container" 	width="100%" content="{/results}" vSpacing="1.5"
+	hSpacing="1.5" class="gridLayout">
+ 	 <CustomTile xmlns="sap.m"
+			press="">
+		<content>  
+						<HBox xmlns="sap.m" class="tile" >
+									<items>
+										<!-- <Image xmlns="sap.m" src="{icon}" width="" height=""></Image> -->
+										 <VBox xmlns="sap.m" class="nameFieldVBox" >
+											<items>
+												<Text xmlns="sap.m" text="{name}" class="nameField"></Text>
+												<Text xmlns="sap.m" text="{types/0}"></Text>
+												<Text xmlns="sap.m" text="{vicinity}"></Text>
+			   									<Text xmlns="sap.m" text="{opening_hours/open_now}"></Text>
+			   									<Text xmlns="sap.m" text="{opening_hours/weekday_text}"></Text>
+											</items>
+										</VBox>
+									</items>
+							</HBox>
+ </content> 
+</CustomTile> 
+
+	</Grid>

@@ -1,0 +1,357 @@
+{
+   "html_attributions" : [
+      "Listings by \u003ca href=\"http://www.indiacom.com/\"\u003eIndiacom Yellow Pages\u003c/a\u003e"
+   ],
+   "next_page_token" : "CoQC-AAAAM4uh2BBX-o1seMe-zak8lQvnBoIHpGC8zeO9JZPixJFWKkDR6Q9E43x2UUSSlGyqeOQu-TK1pvgAHStphZt7h3HbzO23YZJ0OM87_ORltbY5ZZ-5w0oXYA2m7bK5tpm2PXJ0x6wBE6AL1qM1glHbwSKRm6qyhIwzRsHZcWkb8l0TbryHUcwCGJqIAvw4E1RUOowAC6QxC1qTnh3Asg9wQwKfsUMUVeXLfsqny_VkrVqXUMAI5t11K0GjELl-Eueg3pxeKvjhCGzHamls0ml_5CagH689W_ZKWa-j1XjN-Y1pRKjEX9ztyaVKFeYFrwL21MukLsU7ABuawPEOQI9zdUSEFfMvc5HLNojAsAm0Elrpq4aFNO7bg9JoGJodtcnT1UlyxVlsDHK",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.960551,
+               "lng" : 77.595977
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "42636574561a328084a65f103167f9b7bee45f91",
+         "name" : "Yellamma Dasappa Hospital Pharma",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJ-2RVCdoVrjsRy6Nm7JcSzxY",
+         "reference" : "CoQBcwAAALB_OgHywn7EDbeFs8GrsZzaYe1SJ0QV6tmpG_sGXITnkrNkzJ9Txiq314SIrgaRo68NoI10__czS8uPbMFSD6S_1Da8rR5DoxRWnmHv15MAfrl52Nr1WEi4-LrggtfkLeEv4mE0c_KsG9WIZqMGHXVobcrCUSkuYZ77qlZuC0ekEhBJV7_2Wk5-cJplpA61F2ZBGhQSxGqgnEaEQ_2Tuz8R6ev6hpQiew",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Andree Road, Shanti Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.960191,
+               "lng" : 77.59307099999999
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "134137bc5cb547d07091538aff4107a6d123591f",
+         "name" : "Santhosh Medicals",
+         "place_id" : "ChIJ44KFydsVrjsRJVV6SMPUguc",
+         "reference" : "CnRlAAAARFAEDz3DsG0x92llB7YAaTFBcKqiDMFlbcvm_05rj5U7sa4Zzgy7LclMbnZiHLUaa8UctZwWM4r3BB2F7oC8XvYyJrRrUdu3Iws2zhiznSvoZX0TDYHykCdDCmVyktfs3Sp7mg3khB9CHP9wET5YdhIQkdeCA0la42Ku4kch9HB9XxoUu0LtzeKKGQ5Re2TQnGwcGNKqV40",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Shop No : 26, 1st Cross, Rajaram Mohan Roy Extension, Double Road, Shanthi Nagar, Srinivas Colony, Sudhama Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.96032,
+               "lng" : 77.597534
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "97c42f5809f7c22a94c0edcac2fbf6040466aa4c",
+         "name" : "Dinesh Pharma",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJBaM6vtAVrjsRvE1w8pOxEw0",
+         "reference" : "CmRgAAAA6i4p2kkH61Cngvk8eB30_UhJug0g_Xstz2uwqxp8vVEAkxGn939rYh7fpnFb0_ee9OsCRSYIjqNHWJ3dam4iRZAABozvRssjW_Pt8FBIU7RxaxlJvo1v8BBNBmhGWwlNEhBLgwDA8YXjRy1sSNeosu2iGhTTkrakCMw6HPzszQvMUVjBxCbJmA",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Shop Number-130/C,1 , Akkithimmana Halli, 4th Cross Road, Shanti Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.952371,
+               "lng" : 77.59567199999999
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "1bbc5216d31ef2cc4b8b3a9672b4245c3511b730",
+         "name" : "Homoeo Pharmacy",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJlcLxj8UVrjsRILejXJgS1bc",
+         "reference" : "CnRjAAAAEUokAt4pbBiEyQBj832tNC6zHEEAnkmuDbp-Ya4J38aBiwcz_6r68WvCIbkh0e74tmI7H2inSYydyxp6FX7B-eft3RYQlMtDKAeRS2oVt4VH39Z5Js8lSOwqkIHmE97xoGyhhOCBFhxN6maPF9f_MhIQGybdXQu4MrOi34bcYpfLOxoUiAXi-xZkKc8uNHkQrl-DoCtlIXY",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Shop No. 425/22, BTS Main Road, NGO Colony, Wilson Garden, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.953479,
+               "lng" : 77.592197
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "82ea8e14bbc2c1ce95a6dfcef74a0d0e98ce9ca6",
+         "name" : "Sreekar Pharma",
+         "place_id" : "ChIJfSxY8sQVrjsRnptHwjJOmuI",
+         "reference" : "CnRiAAAAD3s7cPYMg3eZGQieT3f2wiVLdGWdEehPxfoCSLMPaRd7VndPSxsfM0CXbgrg8Ft7JlK0UZFI8bOdadaFgM7fNTBCzqVc23NjPxGVZHS5ZHNcZcdY1uZoru7O3cY0IU_jEbEZLVri8whKd0fbxb_sPxIQiBBGKze7PrS1kthCkMtMDxoUQNKqVhUiBWRrf0IkJluRLzD0VYU",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "#3, Classic Centre, Shop 3, H, H Siddaiah Road, Sudhama Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.96045,
+               "lng" : 77.598105
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "686c55fdb545839b3c2bbe7f15f317279e30c1a6",
+         "name" : "Ramakrishna Medicines",
+         "place_id" : "ChIJ99mGwdAVrjsRYcNWcCkIO8I",
+         "reference" : "CnRpAAAAt7vX-o2_mISP4pnYCk_Kiih4Srn1ULxOCsMF7fL9HtoWoArx9KicqciwJEftHnIMe9mf55C1WRNf2mzJp6n81RHr6bCWR2Mhg3p_jo9lTCZDahUKvmAPClwXtFX6d3_bsAaL4NbZpMwzfCzWU75-LhIQADLM7Ioqt6bxjEde1x4YHhoUi-iDO6-VpT1hYTNmB9XR6dCdo5Q",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Shanti Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.952247,
+               "lng" : 77.59585199999999
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "daf75c87810c85e86a00b6183cee9cd4e0b023fa",
+         "name" : "Avarath Homeopathic Drug House",
+         "place_id" : "ChIJi-0dj8UVrjsRHrnY9xyPzcI",
+         "reference" : "CoQBcgAAACCoe2qRDbcnY41IzKggKtBqQc-9ySKwSW0t5q369aVfn3NNcI_y5Rg32Arp542EWbPNVFp0gIOg0hx9NGrLq6tqYRTiJ0W0sotYzl73qaQgX-stjXr7LHuHQcwGd3f_BWjeFyY75xAGGufTUWtQpzVsyyZF-7T2CLoYHkFp0qZJEhBU4eUVvm22wjylzauH79tLGhS05S3BpO_MoGGgBh_E1MZ4y7-3tw",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "S No 192, NGO Colony, Shanti Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.960612,
+               "lng" : 77.59801299999999
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "e9ae7bc568cde4d1a2fae8fa2998eb50c0d5cdd9",
+         "name" : "Apollo Pharmacy",
+         "place_id" : "ChIJ9xs3wdAVrjsR02xYaka41lE",
+         "reference" : "CnRiAAAAvRgAixFi-vL5FlmEV0dLqWlQH5EO_IZGaXuIvVZVi40u5x8Wx9N3qgOS8w7bmi3ySGA_0pQ3EdRYm0yLL2b7McLSDez9PxttmGJJa2FQHMhdGA1uwIBsFiB4CGmLOIuRPTdlhigOzGHYEWEoSsv0CBIQp0Qax6ckzdzixOFfHvM3FRoUuXZoNTGaMqWVj4bg7GgmuJmdLOg",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "# 2/2, Old No.130, Shop No.3 & 4, 1st Cross, East Street, Bheemanna Garden, Shanti Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.960597,
+               "lng" : 77.598142
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "a4a2548470f81127bc0e93ab13eef2c838b57feb",
+         "name" : "Ramkrishna Medicals",
+         "place_id" : "ChIJz33kw9AVrjsRK44kMoldQUo",
+         "reference" : "CnRmAAAAeArPvV-lyF91QxiIsiP57ogkt5XJZQhmIXdFWel-6VdOrC21dqfBlkBvOFKHE2Q3hYLaB64Lx38eBbIbxAPFc8dXAKgvPjUGQPhuYhQaxxT-BlQ27DvJUWbge2LEENR_wxTfZF8eG8mkk6gGtjM06RIQ1t4QumYzYotBuD_POcWmPBoU1uNxbkySXdQoZPp3n3tFCrqjTKg",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Shop Number- 10 , 5th Cross, Lakshmi Road, Shanti Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.952175,
+               "lng" : 77.595871
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "7cc272ff22a86df0b991c29079bc737434e467bd",
+         "name" : "Arhanth Homoeopathic and Ayurvedic Drug House",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJRZe2j8UVrjsRnvzpZ5Y7vu4",
+         "reference" : "CpQBgQAAAD2E-abZRbjooUVUtHTNdthFsv3Lf5UPaKmyVkVF237-Q9esPT-i2uB__nWMHRJQach6G7fq-zlYE7xi15gAg4nt4k8HhadcLfgku4WGw8xGKkbtEIRShbo6rCihLbzX5vzEB48U3pxHZbV7KFamcAAII_hP04leVHkPBwwxF8LCv_PwgwibvPlrhO0Bq1FiVhIQfN5Vc57RXOW-paMa9TrVMRoUe9IVTOOXKDmADP4RCNfVXpk2dJg",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Ground Floor, No.425/21-2, B.T.S.Road,Wilson Garden, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.956749,
+               "lng" : 77.589946
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "b67d8d1990be201cdeea63e79bef96fc329ca263",
+         "name" : "Bhavesh Medical And General Store",
+         "place_id" : "ChIJvVZZo9wVrjsRjBRV26t51x8",
+         "reference" : "CoQBdAAAAFGAIc3_dJZUxvtGZqW9hC1VoDWvHUXPM24VTFef-2qpOvijFmbiE0bjn2KWG9iqqtTdwWZKKA4adgLPyYbwBwRLGAvK47rTrzLFZbGdVsORJRoc58tt8vzkR624CFT_xBIyygnPWvzgyUaogStkq1x2Eix7B2X7U418hIbpnYkeEhDwltJVLgmudGvDXuklQzveGhRuZXOROg-5n5xiSilo8cyLGrJfQQ",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "food", "store", "health", "establishment" ],
+         "vicinity" : "No.21, 2nd Main Next to Coffee Mane, Annipura Main Road, Sudhama Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.961179,
+               "lng" : 77.59833399999999
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "0cc27640f0f653b6af7f31fcceb7721f83f1cb49",
+         "name" : "Care Pharma",
+         "opening_hours" : {
+            "open_now" : false,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJ-aStz9AVrjsRw2r8ToawtBY",
+         "reference" : "CmReAAAAtjc_DAAcZkA3WZ1SgqSTiVIG1qkqZPEAv7TOHDsjnyQJ8HSwYqDXtt3FiffrqSeptJfphwcKIgHPS--8xaJZChYmgzgullUHEzh21iX7DXWTHUZJ-AfutdePYRq5xSIyEhAXtPVc9D3L7mk7n5e6X-BhGhRu4tcajttGiiYjZIrr8oqe8vSI5g",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "#1 , 6/4, 5th cross, Lakshmi road,, Shanthinagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.951504,
+               "lng" : 77.59503100000001
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "5a4995daeca8a2f6702328bd471bf2a89f273740",
+         "name" : "Rajalakshmi Medicals",
+         "place_id" : "ChIJoSL46sUVrjsRmdApPHGrT-I",
+         "reference" : "CnRoAAAA6jLtv0mytD2GL_PuI_3K3LJlfJIhqp_AD6Wg84Qj4p3oRZAMZw4jFXdHzsT0cx19AVWlORKH1x82qJPdbWyCxcNL6jp3veZHsprgUc5W8BdKox2wFpjHugLlz_L8GA9oRRFZIlIWeOeTZQLYdzzMEBIQUpQSa9HxEdzmb6t01R2egRoUACr1YL-Z7LTnKJTcnvkqHzHh3G8",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "Siddaiah Road, NGO Colony, Wilson Garden, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.957267,
+               "lng" : 77.589817
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "c122db0cc5770ace899504afa553aadf22956ea5",
+         "name" : "Mahaveer Medical & General Stores",
+         "place_id" : "ChIJA5d2l9wVrjsRlRCIlTss8FE",
+         "reference" : "CoQBdAAAAOX4ekYUkQAzle05rhcsJjy7DCnEYlb4GjngibJxmzCWqoMJ_YaKTXXMnyPS3PAKUZ6QVdEhOoIjjZsA3J6qBSOMnDyTXPTm4wLXKf0uFC6GJYSvmQn8-WeaQbMeyN67rtiteLBVdRKjmC40C1Gsen5Wxgtbg3IeUlGaSvpuJgrUEhAUmrTONcJnWeV7Ui4JldwKGhSsvyWfvHdVAnElvE778euOjIrguw",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "28, 5th Cross, Near-Ayyappa Temple, Sudhama Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.951526,
+               "lng" : 77.594114
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "74339b777e164f4649a30451591795e6e3604da8",
+         "name" : "Park Medical Store",
+         "place_id" : "ChIJbWNuyMUVrjsR3p6axR9-IFQ",
+         "reference" : "CnRlAAAAPwV7HwrZ0NWu7jeoO5P29iDq01bvs2suG16U6mGIV-esVKlUwX4Wq7YbOxVWPs51W-L_xjX5bU0c9oJzK_k3W3o5qLxcknferR9acZ4hgyxw5igKxgZQKF44zA-pJRIedqlrgUkeQ5jPXuXFB94k7BIQs24T8cKz57vnCVWLlPkVMRoUPI3-Jfg5pGB4_J6rNCbtemXjKe8",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "3rd Cross Road, Wilson Garden, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.96236,
+               "lng" : 77.594212
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "a0393db6328d3f16c5cced1186147aa7b0101d6d",
+         "name" : "Paras Pharmacy",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJJUwsm9kVrjsRHnEnmVHshZI",
+         "reference" : "CnRiAAAA_r8k_X_G6GCW-2wU9BsYvoaab9pp9upM-eSFt7Ia1jVVXxNsizUD3kbTEJtv0YInb-1nHSOZ2Vla3KZrCNDp614E3U2d29VITOnDio-yMbXXVIMFoA3iRat10QGLrnGFkQBmGqL5gLbYBNw6ITDlIhIQOTv3ErXKZbLJXp1zFvQN_RoUUY1z8gNUCUHbgiqqjj1kdrQ43ik",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "No:218, Lal Bagh Main Road, Srinivas Colony, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.957925,
+               "lng" : 77.600962
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "758b845ecc412be8b790eec4becddfa59ca1ab7f",
+         "name" : "Sathya Medical and General Store",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJ6-wFlNEVrjsRWQL0EGQqlsk",
+         "reference" : "CoQBdAAAAChIi2r2x9kquBuBUCSG7aYu8YcYw5JuDN-yb3NX4fumf0v6HsEnup0oRO5osEzRLmVLKIJSAahqXxf8wAcclxU_833fYOW1wYVPYTWpvdKY-GevXI115LUgasRpDjcNqh_aqOd51h07QgHy8_a047gVxmF4A3ZHXwe7Ol5XwQ4yEhC4fJoaCnlcyZoucn_-_BSdGhSzo9nUZaE4faDYkR4TvHiQ80KGRg",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "food", "store", "health", "establishment" ],
+         "vicinity" : "19 , Main Road , C Street, Shanti Nagar Main Road, Langford Town, Shanti Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.958965,
+               "lng" : 77.58978399999999
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "86e63de66c3b553ce1e167cf20d60dab21b922ac",
+         "name" : "Sanjeevini Medicals",
+         "place_id" : "ChIJ00PoZNwVrjsREbK62XsrI7k",
+         "reference" : "CnRnAAAAEl4Ba5dtLkl3ELaq-3oyylHuiaEpUzVfWV6KCKdkJ_N66eEDfcgmfvxQAig0MJUbDNKBoIa1zPpFTEX-msVD6f2A4jABiiQcoRdCyFcEjPv-YwxqMBz_blPEfuTGxrN-8FjgmMucLac8hmcOmguzZhIQg_uiJFOOd3Kudse5vuOS-hoUBlYdqhAGwHQYnT3-QSuN4Xa5kK4",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "#3, 2nd Cross, RRMR Extn, Opp Bangalore Institute of Oncology, KH Road, Sudhama Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.96266,
+               "lng" : 77.59401699999999
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "4cd6bc1d68fb194c72204fb7cc1a3dc5d470e858",
+         "name" : "Royal Pharma",
+         "place_id" : "ChIJn_OfmdkVrjsRpEyBpFQDBXI",
+         "reference" : "CmRfAAAAXYaRJyVwGHZtrQuR3mSBZ2Tp6Rx6SivIvLWLIKFYluvUPzlKVilzUJftjpEw89bNua0_Gqwx3S8bpzfmL-M6l0T4RR4LZYd3IdAzpjBhxbH5RUu0Vd7f6rItx8KcaT2iEhBV0Rs3WEHCKojjxkiBQ0pvGhQzXSDTp_rlPWQ7Fv6yqOpa2ArybA",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "1st Main Road, Sampangi Rama Nagara, Sampangi Rama Nagar, Bengaluru"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 12.961867,
+               "lng" : 77.591983
+            }
+         },
+         "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "16e0bd188c6c2e17783082f745ca9869377d0f34",
+         "name" : "Sri Lakshmi Pharma",
+         "place_id" : "ChIJX4SSXdkVrjsRln_qmUjQUxs",
+         "reference" : "CnRlAAAAXmufC8_N8kBQ9YQcqW2OMxF3aQR6dOKKnqxxgesmD_aM9CCYLDM61W-1L-rgtK56Nw6X7yOw-EZ5UwsKVFZi6Fy_Z-kkSkUATC1YbCrHbuKJ2zEKpCnSXBWBHn9rQjtsC2gwtVCzxvmug32Ml0K28xIQGPn_fJoso76_WPJVnObQtBoUtUQi0e6L7HQyV4orKkB_4im4XUI",
+         "scope" : "GOOGLE",
+         "types" : [ "pharmacy", "store", "health", "establishment" ],
+         "vicinity" : "69/2, Mission Road, Near-Mamta Nursing Home Premises, K H Road, Bengaluru"
+      }
+   ],
+   "status" : "OK"
+}

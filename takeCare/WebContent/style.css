@@ -16,7 +16,7 @@
 .titleNameBox >.sapMFlexItem:nth-of-type(1){
 	width: 90px; 
 }
-.sapUiRespGridSpanL3, .sapMCustomTile, .sapMCustomTileContent {
+.sapUiRespGridSpanL3, .sapMCustomTile, .sapMCustomTileContent, .tile {
 	width: 350px !important;
 	height: 130px !important;
 }
