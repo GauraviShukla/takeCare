@@ -10,6 +10,24 @@ sap.ui.controller("takecare.selectLocation", {
 		this.setSpecialisationData();
 		this.onPressShowListOfDoctors();
 	},
+	onPressShowListOfHospitals: function(){
+		results = sap.ui.getCore().byId("medicalStores--container");
+		this.byId("takeCarePage").removeContent(results);
+		
+		var resultsView = sap.ui.getCore().byId("doctorsResults");
+		if(!resultsView){
+			resultsView = sap.ui.view({
+			id: "doctorsResults",
+			viewName : "takecare.searchResults",
+			type : sap.ui.core.mvc.ViewType.XML,
+			width : "100%"
+		});
+		}
+		var model = resultsView.getModel();
+		model.loadData("Hospitals.json");
+		resultsView.setModel(model);
+		this.byId("takeCarePage").addContent(resultsView);
+	},
 	onPressShowListOfDoctors: function(){
 		results = sap.ui.getCore().byId("medicalStores--container");
 		this.byId("takeCarePage").removeContent(results);
@@ -23,6 +41,9 @@ sap.ui.controller("takecare.selectLocation", {
 			width : "100%"
 		});
 		}
+		var model = resultsView.getModel();
+		model.loadData("Doctors.json");
+		resultsView.setModel(model);
 		this.byId("takeCarePage").addContent(resultsView);
 	},
 	onPressShowListOfMedicalStores: function(){
