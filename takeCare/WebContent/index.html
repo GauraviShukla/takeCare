@@ -23,9 +23,10 @@
 		<script type="text/javascript" src="reusable/utils.js"></script>
 		<script>
 				sap.ui.localResources("takecare");
-				var app = new sap.m.App({initialPage:"idselectlocation"});
+				var app = new sap.m.App("appId",{initialPage:"idselectlocation"});
 				var page = sap.ui.view({id:"idselectlocation", viewName:"takecare.selectLocation", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(page);
+				var page1= sap.ui.view({id:"detailsIDd",viewName:"takecare.DetailsPage", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page).addPage(page1);
 				app.placeAt("content");
 		</script>
 

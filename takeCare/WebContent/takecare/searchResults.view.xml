@@ -3,7 +3,7 @@
 	<Grid xmlns="sap.ui.layout" id="container" 	width="100%" content="{/}" vSpacing="1.5"
 	hSpacing="1.5" class="gridLayout">
  	 <CustomTile xmlns="sap.m"
-			press="">
+			press="tilepress">
 		<content>  
 		<VBox xmlns="sap.m" class="tile" >
 					<items>
@@ -21,7 +21,7 @@
 										</VBox>
 									</items>
 							</HBox>
-							<RatingIndicator xmlns="sap.m" iconSize="10px" enabled="false" value= "{rating}">	</RatingIndicator>
+							<RatingIndicator xmlns="sap.m" iconSize="10px" enabled="false" value= "{data>rating}">	</RatingIndicator>
 						</items>
 				</VBox>
  </content> 

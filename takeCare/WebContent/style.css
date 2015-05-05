@@ -1,6 +1,9 @@
 @CHARSET "UTF-8";
 .tile{
-	background-color: white !important;
+		margin: 10px !important;
+		width: 11rem !important;
+		height: 11rem !important;
+		background-color: white !important;
 }
 #tileContainer{
 	margin: auto;
@@ -23,3 +26,12 @@
 .gridLayout{
 	margin-left: 50px;
 }
+#container
+{
+	margin: auto;
+	position:relative !important;
+	}
+	
+	#detailsIDd--vBox-__panel0-0{
+	margin-left:35%
+	}

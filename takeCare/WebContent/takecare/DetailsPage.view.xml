@@ -1,0 +1,84 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="takecare.DetailsPage"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" showNavButton="true" navButtonPress="back">
+		<content>
+			<Panel width="auto" class="sapUiResponsiveMargin sapUiNoContentPadding"
+				content="{/data}">
+
+				<content>
+					<f:SimpleForm minWidth="1024" maxContainerCols="2"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="3"
+						labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+						columnsM="1">
+						<f:content>
+							<HBox>
+								<items>
+									<HBox>
+										<items>
+											<Image src="{img}" width="168%" height="" />
+										</items>
+									</HBox>
+									<VBox id="vBox">
+										<items>
+											<Label text="Name" />
+
+
+											<Text text="{doctorName}" />
+											<Label text="Designation" />
+											<Text text="{designation}" />
+											<Label text="Ratings" />
+											<RatingIndicator value="{ratings}" iconSize="10px" />
+										</items>
+									</VBox>
+								</items>
+							</HBox>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+
+			<Panel width="auto" class="sapUiResponsiveMargin" content="{/data}">
+				<content>
+					<f:SimpleForm minWidth="1024" maxContainerCols="2"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="3"
+						labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+						columnsM="1">
+						<f:content>
+
+							<Label text="Ph No" />
+							<Text text="{phNo}" />
+							<Label text="Fees" />
+							<Text text="{fees}" />
+							<Label text="Speciality" />
+							<Text text="{speciality}" />
+							<Label text="Address" />
+							<Text text="{address}" />
+							<Label text="Expected Timings" />
+							<Text text="{expectedTimings}" />
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" content="{/data}">
+				<content>
+					<f:SimpleForm minWidth="1024" maxContainerCols="2"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="3"
+						labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+						columnsM="1">
+						<f:content>
+							<Label text="User Ratings" />
+							<RatingIndicator value="{ratings}" iconSize="10px" />
+							<Label text="User Comments" />
+							<Text text="{userComment}" />
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<Panel>
+
+
+			</Panel>
+		</content>
+	</Page>
+</core:View>

@@ -60,9 +60,9 @@ sap.ui.controller("takecare.selectLocation", {
 //		pom.setAttribute('download',"C://Users//I303394//git//takeCare//takeCare//WebContent//MedStore.json");
 //		pom.click();
 	     
-		model.loadData("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=AIzaSyCsJxcx_fpFlt1uVgutcZXGPUISfzheTR0");
+//		model.loadData("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=AIzaSyCsJxcx_fpFlt1uVgutcZXGPUISfzheTR0");
 
-//		model.loadData("medicalResults.json");
+		model.loadData("medicalResults.json");
 		this.medicalStoresView.setModel(model);
 		this.byId("takeCarePage").addContent(this.medicalStoresView);
 	},

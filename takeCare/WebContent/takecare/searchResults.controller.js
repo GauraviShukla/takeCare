@@ -65,5 +65,11 @@ sap.ui.controller("takecare.searchResults", {
 //	onExit: function() {
 //
 //	}
+	
+	tilepress : function(){
+		var appId= sap.ui.getCore().byId("appId");
+		var pageid= sap.ui.getCore().byId("detailsID");
+		appId.to('detailsIDd','slide');
+	}
 
 });
