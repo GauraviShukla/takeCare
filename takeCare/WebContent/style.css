@@ -35,3 +35,8 @@
 	#detailsIDd--vBox-__panel0-0{
 	margin-left:35%
 	}
+	
+	.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormResGridLbl:not(.sapUiRespGridSpanL12){
+		height: 29px !important;
+		margin-left:134px
+	}
