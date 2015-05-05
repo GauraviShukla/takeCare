@@ -75,10 +75,32 @@
 					</f:SimpleForm>
 				</content>
 			</Panel>
-			<Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" content="{/data}">
+			<f:SimpleForm minWidth="1024" maxContainerCols="2"
+						editable="true" layout="ResponsiveGridLayout" labelSpanL="3"
+						labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+						columnsM="1">
+						<VBox id ="idv">
+						<HBox>
+						<Label id="entercmnt" text="Enter Comment" />
+						<TextArea>
+						</TextArea>
+						
+						
 
-
+						</HBox>
+						<HBox>
+						<Label  id= "enetrlab" text="Enter Rating" />
+						<RatingIndicator value="" iconSize="10px" />
+						
+						</HBox>
+						<Button text="Submit" type="Accept"> 
+						</Button>
+						</VBox>
+						
+			</f:SimpleForm>
 			</Panel>
+		
 		</content>
 	</Page>
 </core:View>
