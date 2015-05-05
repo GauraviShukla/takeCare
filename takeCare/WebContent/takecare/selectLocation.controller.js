@@ -55,14 +55,14 @@ sap.ui.controller("takecare.selectLocation", {
 			this.medicalStoresView = sap.ui.xmlfragment("medicalStores","fragments.medicalStores",this);
 		var model = new sap.ui.model.json.JSONModel();
 
-//		var xhr = new XMLHttpRequest();
-//		 xhr.open("GET","https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=AIzaSyDjCts18DCLVN6G2ITqzEi-725PCP0dh0k"); 
-//	     xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-//	     xhr.setRequestHeader("Access-Control-Allow-Headers", "origin, x-requested-with, x-http-method-override, content-type");
-//	     xhr.setRequestHeader("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
-//	     xhr.send();
+//		var pom = document.getElementById('fileDownloadLink');
+//		pom.setAttribute('href', "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=AIzaSyCsJxcx_fpFlt1uVgutcZXGPUISfzheTR0");
+//		pom.setAttribute('download',"C://Users//I303394//git//takeCare//takeCare//WebContent//MedStore.json");
+//		pom.click();
 	     
-		model.loadData("medicalResults.json");
+		model.loadData("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.956829,77.595291&rankby=distance&types=pharmacy&key=AIzaSyCsJxcx_fpFlt1uVgutcZXGPUISfzheTR0");
+
+//		model.loadData("medicalResults.json");
 		this.medicalStoresView.setModel(model);
 		this.byId("takeCarePage").addContent(this.medicalStoresView);
 	},
