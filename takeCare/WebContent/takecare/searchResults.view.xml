@@ -21,7 +21,7 @@
 										</VBox>
 									</items>
 							</HBox>
-							<RatingIndicator xmlns="sap.m" iconSize="10px" enabled="false" value= "{data>rating}">	</RatingIndicator>
+							<RatingIndicator class="rating" xmlns="sap.m" iconSize="10px" enabled="false" value= "{data>rating}">	</RatingIndicator>
 						</items>
 				</VBox>
  </content> 

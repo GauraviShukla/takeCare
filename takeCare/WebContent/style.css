@@ -1,4 +1,8 @@
 @CHARSET "UTF-8";
+
+.rating{
+	margin-top: -7px;
+}
 .tile{
 		margin: 10px !important;
 		width: 11rem !important;
@@ -21,10 +25,10 @@
 }
 .sapUiRespGridSpanL3, .sapMCustomTile, .sapMCustomTileContent, .tile {
 	width: 350px !important;
-	height: 130px !important;
+	height: 140px !important;
 }
 .gridLayout{
-	margin-left: 50px;
+	margin-left: 150px;
 }
 #container
 {
